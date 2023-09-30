@@ -1,0 +1,315 @@
+.NavOpen {
+    /* @media (max-width: 768px) {
+           width: 200px;
+        } */
+    z-index: 1;
+    width: 270px;
+    background-color: rgb(0, 0, 0);
+    height: 100dvh;
+    box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: ease-in-out 300ms;
+    display: flex;
+    flex-direction: column;
+    /* overflow: hidden; */
+    justify-content: space-between;
+    position: relative;
+
+    & h1 {
+        width: 100%;
+        font-size: 20px;
+        font-weight: 400;
+        transition: ease-in-out 300ms;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 30px;
+        animation: show 0.3s backwards;
+
+        >span {
+            position: relative;
+            display: inline-block;
+            color: rgb(0, 145, 223);
+            height: 1.25rem;
+            vertical-align: bottom;
+            overflow: hidden;
+
+            & span {
+                display: block;
+                animation:
+                    wordAnimation 5s infinite ease;
+            }
+
+        }
+    }
+
+    .links {
+        @media (max-width: 768px) {
+            font-size: 15px;
+        }
+
+        animation: show 0.3s backwards;
+
+        &:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(20, 20, 20);
+            border-radius: 10px;
+            width: 240px;
+        }
+    }
+
+    .logout {
+        .logoutbtn {
+            @media (max-width: 768px) {
+                    font-size: 25px;
+                }
+            color: rgb(255, 0, 0);
+            font-size: 30px;
+            padding: .2rem .6rem;
+            border-radius: 5px;
+        }
+    }
+
+    #menu {
+        position: absolute;
+        top: 0;
+        left: 275px;
+        z-index: 2;
+        transition: ease-in-out 300ms;
+    }
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    transition: .3s;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #171717;
+
+    & img {
+        width: 35px;
+        margin-left: 18px;
+        border-radius: 999px;
+    }
+
+    .userinfo {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+
+        & p {
+            margin: 0;
+            color: rgb(255, 255, 255);
+            text-transform: capitalize;
+            margin-left: 15px;
+            padding: 0;
+        }
+
+        & small {
+            font-size: 10px;
+            margin-left: 16px;
+            letter-spacing: .5px;
+            color: rgb(164, 162, 162);
+        }
+    }
+}
+
+ul {
+    width: 200px;
+    margin: 5px 15px;
+    padding: 0;
+    height: 100%;
+    /* background-color: white; */
+
+    & li {
+        list-style: none;
+        margin-bottom: 15px;
+
+        .links {
+            @media (max-width: 768px) {
+                font-size: 15px;
+            }
+
+            color: rgb(255, 255, 255);
+            font-weight: 400;
+            text-decoration: none;
+            text-transform: capitalize;
+            display: flex;
+            gap: 25px;
+            justify-content: flex-start;
+            align-items: center;
+            letter-spacing: 1px;
+            padding: .2rem 0rem;
+
+            .icon {
+                @media (max-width: 768px) {
+                    font-size: 20px;
+                }
+
+                font-size: 20px;
+                color: rgb(255, 255, 255);
+                transition: .3s;
+                padding: .3rem .6rem;
+                border-radius: 5px;
+            }
+        }
+
+    }
+}
+
+#menu {
+    @media (max-width: 768px) {
+        margin: 10px;
+    }
+
+    transition: ease-in-out 500ms;
+    padding: .2rem .4rem;
+    box-shadow: -5px 0px 10px rgba(159, 157, 157, 0.1);
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.NavClose {
+    @media (max-width: 768px) {
+        width: 0px;
+    }
+
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 70px;
+    overflow: hidden;
+    transition: ease-in-out 500ms;
+    height: 100dvh;
+    background-color: rgb(255, 255, 255);
+    box-shadow: -5px 0px 20px rgba(0, 0, 0, 0.1);
+
+    & h1 {
+        display: none;
+        transition: ease-in-out 300ms;
+    }
+
+    .profile {
+        background-color: white;
+    }
+
+    .links {
+        .icon {
+            color: rgb(0, 0, 0);
+            padding: .3rem .6rem;
+            border-radius: 5px;
+
+            &:hover {
+                color: rgb(31, 31, 31);
+                background-color: rgb(199, 197, 197);
+            }
+        }
+    }
+
+
+    .logoutbtn {
+        color: rgb(0, 0, 0);
+        font-size: 30px;
+        padding: .2rem .6rem;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: white;
+            color: red;
+
+        }
+    }
+
+    #menu {
+        @media (max-width: 768px) {
+            left: 0;
+        }
+
+        position: absolute;
+        top: 0;
+        left: 75px;
+        z-index: 5;
+    }
+
+}
+
+.logout {
+    color: rgb(255, 0, 0);
+    width: 200px;
+    margin: 20px 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    &:hover {
+        cursor: pointer;
+        color: white;
+    }
+
+    .logoutbtn {
+        color: rgb(7, 204, 4);
+        border-radius: 999px;
+        font-size: 30px;
+        transition: .5s;
+    }
+
+    /* Pushes the "Logout" link to the bottom */
+}
+
+/* for navbar links */
+@keyframes show {
+    0% {
+        opacity: 0;
+        translate: 0 -30px;
+    }
+
+    100% {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+/* for navbar heading animation */
+@keyframes wordAnimation {
+    0% {
+        transform: translateY(0%);
+    }
+
+    25% {
+        transform: translateY(-100%);
+    }
+
+    50% {
+        transform: translateY(-200%);
+    }
+
+    75% {
+        transform: translateY(-300%);
+    }
+
+    100% {
+        transform: translateY(-400%);
+    }
+}
