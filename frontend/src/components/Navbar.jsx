@@ -15,7 +15,8 @@ const Navbar = () => {
     <nav className={isOpen ? "NavOpen" : "NavClose"}>
       {user && <>
         <div className="profile">
-          <img src={user.photoURL ? user.photoURL : "profile.png"} alt="profile" />
+          {/* <img src={user.photoURL ? user.photoURL : "../profile.png"} alt="profile" /> */}
+          <img src={"profile.png"} alt="profile" />
           <div className="userinfo">
             <p>{user?.name}</p>
             <small>{user?.email}</small>
@@ -43,7 +44,7 @@ const Navbar = () => {
             <NavLink style={{ animationDelay: "0.5s" }} className="links" to="/JokesApp"><i className="bi bi-emoji-laughing icon"></i> Jokes App</NavLink>
           </li>
           <li>
-            <NavLink style={{ animationDelay: "0.6s" }} className="links" to="TypingTestApp/"><i class="bi bi-keyboard icon"></i> Typing test App</NavLink>
+            <NavLink style={{ animationDelay: "0.6s" }} className="links" to="TypingTestApp/"><i className="bi bi-keyboard icon"></i> Typing test App</NavLink>
           </li>
         </ul>
         <div className="logout" onClick={() => { setUser(null), localStorage.clear(), navigate('/login', { replace: true }) }}>
